@@ -1,3 +1,6 @@
+**Based on heroku buildpack, but added support for sbt-0.12.2-RC2 respectively play2 2.1-RC2**
+
+
 Heroku buildpack: Scala
 =========================
 
@@ -12,7 +15,11 @@ Example usage:
     $ ls
     Procfile build.sbt project src
 
-    $ heroku create --buildpack https://github.com/heroku/heroku-buildpack-scala.git
+    $ heroku create --buildpack https://github.com/oheidemann/heroku-buildpack-scala.git
+    
+    or if you've already created your app
+    
+    $ heroku config:add BUILDPACK_URL=https://github.com/oheidemann/heroku-buildpack-scala
 
     $ git push heroku master
     ...
